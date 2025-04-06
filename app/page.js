@@ -1,6 +1,8 @@
 import Image from "next/image";
 import AirlineTracker from "@/components/airlineTracker";
 import FlightRadarMap from "@/components/flightRadarMap";
+import YoutubeEmbed from "@/components/youtubeEmbed";
+import LiveATC from "@/components/liveatc";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       </p>
       <AirlineTracker />
       <FlightRadarMap />
+      <YoutubeEmbed />
+      <LiveATC/>
     </div>
   );
 }
