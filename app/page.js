@@ -8,7 +8,7 @@ export default function Home() {
         lofi air traffic control 🇯🇵 Japan edition
       </h1>
       <p className="c">
-        Listen to air traffic control radio from Tokyo International Airport (RJTT) mixed with Lo-fi.
+      Listen to live air traffic control radio from Tokyo International Airport (RJTT) mixed with 90's Retro Tokyo Lo-fi from Japan.
       </p>
       <AirlineTracker />
     </div>

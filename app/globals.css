@@ -1,9 +1,20 @@
 @import "tailwindcss";
 
+/* Digital font for clock */
+@font-face {
+  font-family: 'Digital';
+  src: url('https://db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2') format('woff2'),
+       url('https://db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #f5f5f5;
   --foreground: #171717;
   --heading: #1a1a1a;
+  --container-bg: #1a1a1a;
 }
 
 @theme inline {
@@ -11,6 +22,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --container-bg: var(--container-bg);
 }
 
 
@@ -41,4 +53,16 @@ h1 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   display: block;
+}
+
+.clock {
+  font-family: 'Digital', 'Courier New', monospace;
+  font-size: 1.5em;
+  color: white;
+  background-color: black;
+  padding: 5 10px;
+}
+
+.clock-family{
+  font-family: 'Digital', 'Courier New', monospace;
 }
