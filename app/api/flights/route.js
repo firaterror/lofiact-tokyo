@@ -4,7 +4,7 @@ export async function GET(request) {
   
   try {
     const response = await fetch(
-      `https://api.flightradar24.com/common/v1/airport.json?code=nrt&plugin[]=&plugin-setting[schedule][mode]=arrivals&plugin-setting[schedule][timestamp]=${timestamp}&page=1&limit=100&fleet=&token=`,
+      `https://api.flightradar24.com/common/v1/airport.json?code=hnd&plugin[]=&plugin-setting[schedule][mode]=arrivals&plugin-setting[schedule]&page=1&limit=100&fleet=&token=`,
       {
         headers: {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',

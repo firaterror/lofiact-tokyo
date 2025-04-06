@@ -67,25 +67,26 @@ export default function AirlineTracker() {
   }, []);
 
   // Format time for display
-  const formatTime = (timestamp) => {
-    if (!timestamp) return "-";
-    const date = new Date(timestamp * 1000);
+  const formatTime = (flightTime) => {
+    if (!flightTime?.scheduled?.departure) return "-";
+    const timestamp = flightTime.scheduled.departure;
+    const date = new Date(timestamp * 1000); // Convert Unix timestamp to milliseconds
     return date.toLocaleTimeString('en-US', {
       timeZone: 'Asia/Tokyo',
       hour: '2-digit',
       minute: '2-digit',
-      hour12: false
+      hour12: true
     });
   };
 
   return (
-    <div className="p-5 w-auto max-h-[600px] bg-[#1a1a1a] border-2 border-[#333] border-solid rounded-xl overflow-y-auto">
+    <div className="p-5 w-auto max-h-[600px] bg-[#1a1a1a] border-2 border-[#333] border-solid rounded-xl overflow-y-auto mb-8 mt-8">
         <div className="flex items-center justify-between mb-4">
             <h1 className="!text-[2em] !text-red-500 clock-family">✈️ ARRIVALS / 到着</h1>
             <div className="clock rounded-md text-center" style={{ padding: '0.3125rem 0.625rem' }}>{tokyoTime}</div>
         </div>
         
-        <div className="table-container text-white">
+        <div className="table-container text-white font-medium">
           {loading ? (
             <div className="text-center py-4">Loading flight data...</div>
           ) : error ? (
@@ -106,7 +107,7 @@ export default function AirlineTracker() {
                   return (
                     <tr key={index} className="border-b border-gray-800 hover:bg-gray-900">
                       <td className="py-2 px-3">
-                        {formatTime(flightData.time.scheduled.arrival_time)}
+                        {formatTime(flightData.time)}
                       </td>
                       <td className="py-2 px-3">
                         {flightData.airport.origin.name || flightData.airport.origin.code.iata}

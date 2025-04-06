@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AirlineTracker from "@/components/airlineTracker";
+import FlightRadarMap from "@/components/flightRadarMap";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       Listen to live air traffic control radio from Tokyo International Airport (RJTT) mixed with 90's Retro Tokyo Lo-fi from Japan.
       </p>
       <AirlineTracker />
+      <FlightRadarMap />
     </div>
   );
 }
