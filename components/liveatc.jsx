@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 
 export default function LiveATC() {
-  const [volume, setVolume] = useState(60);
+  const [volume, setVolume] = useState(40);
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef(null);
 
@@ -71,7 +71,7 @@ export default function LiveATC() {
       />
       
       {/* Fixed position volume control at bottom right */}
-      <div className="fixed bottom-6 right-6 z-50 flex items-center bg-black backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-gray-700">
+      <div className="fixed bottom-6 right-6 z-50 flex items-center bg-black backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
         <div className="relative flex items-center">
           <div className="mr-3 text-white text-xs">
           </div>
@@ -83,16 +83,17 @@ export default function LiveATC() {
               max="100"
               value={volume}
               onChange={handleVolumeChange}
-              className="w-full h-2 bg-black rounded-lg appearance-none cursor-pointer accent-red-600"
+              className="w-full h-2 bg-white rounded-lg cursor-pointer accent-red-600 shadow-md"
               style={{
                 '--tw-ring-color': 'rgb(220 38 38)',
                 '--progress-percent': `${volume}%`,
-                background: 'linear-gradient(to right, rgb(220 38 38) 0%, rgb(220 38 38) var(--progress-percent), rgb(0 0 0) var(--progress-percent), rgb(0 0 0) 100%)'
+                background: 'linear-gradient(to right, rgb(220 38 38) 0%, rgb(220 38 38) var(--progress-percent), rgb(255 255 255) var(--progress-percent), rgb(255 255 255) 100%)',
+                boxShadow: '0 0 5px rgba(220, 38, 38, 0.5), inset 0 1px 2px rgba(0, 0, 0, 0.2)'
               }}
             />
           </div>
           
-          <div className="ml-2 text-white text-xs font-bold min-w-[40px] text-center">
+          <div className="ml-2 text-white text-shadow-sm font-black min-w-[40px] text-center">
             {volume}%
           </div>
         </div>
@@ -104,7 +105,8 @@ export default function LiveATC() {
           height: 8px;
           border-radius: 10px;
           outline: none;
-          background-color: #000000;
+          background-color: #ffffff;
+          box-shadow: 0 0 5px rgba(220, 38, 38, 0.5), inset 0 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         input[type='range']::-webkit-slider-thumb {
@@ -114,8 +116,8 @@ export default function LiveATC() {
           border-radius: 50%;
           background: rgb(220 38 38);
           cursor: pointer;
-          border: 2px solid rgb(255 255 255 / 0.6);
-          box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+          border: 2px solid rgb(255 255 255 / 0.9);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
         }
 
         input[type='range']::-moz-range-thumb {
@@ -124,15 +126,16 @@ export default function LiveATC() {
           border-radius: 50%;
           background: rgb(220 38 38);
           cursor: pointer;
-          border: 2px solid rgb(255 255 255 / 0.6);
-          box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+          border: 2px solid rgb(255 255 255 / 0.9);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
         }
 
         input[type='range']::-webkit-slider-runnable-track,
         input[type='range']::-moz-range-track {
-          background-color: #000000;
+          background-color: #ffffff;
           height: 8px;
           border-radius: 10px;
+          box-shadow: 0 0 5px rgba(220, 38, 38, 0.5), inset 0 1px 2px rgba(0, 0, 0, 0.2);
         }
       `}</style>
     </>

@@ -3,6 +3,7 @@ import AirlineTracker from "@/components/airlineTracker";
 import FlightRadarMap from "@/components/flightRadarMap";
 import YoutubeEmbed from "@/components/youtubeEmbed";
 import LiveATC from "@/components/liveatc";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       <FlightRadarMap />
       <YoutubeEmbed />
       <LiveATC/>
+      <hr className="border-0 mb-8 mt-8 border-t-2 border-t-[#ddd] border-solid"/>
+      <p className="!text-sm !text-[#666]">Made by <Link className="text-[#004499] underline cursor-pointer hover:text-[#0066cc]" href="https://firat.run">firat</Link> in 2025</p> 
     </div>
   );
 }

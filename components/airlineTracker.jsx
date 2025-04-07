@@ -80,7 +80,7 @@ export default function AirlineTracker() {
   };
 
   return (
-    <div className="p-5 w-auto max-h-[600px] bg-[#1a1a1a] border-2 border-[#333] border-solid rounded-xl overflow-y-auto mb-8 mt-8">
+    <div className="p-5 w-auto max-h-[600px] bg-[#1a1a1a] border-2 border-[#333] border-solid rounded-xl overflow-y-auto mb-8 mt-8" style={{ boxShadow: '0 0 20px 5px rgba(0, 0, 0, 0.5)' }}>
         <div className="flex items-center justify-between mb-4">
             <h1 className="!text-[2em] !text-red-500 clock-family">✈️ ARRIVALS / 到着</h1>
             <div className="clock rounded-md text-center" style={{ padding: '0.3125rem 0.625rem' }}>{tokyoTime}</div>
