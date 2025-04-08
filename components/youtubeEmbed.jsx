@@ -2,18 +2,19 @@
 
 import React from 'react'
 
-export default function YoutubeEmbed() {
+export default function YoutubeEmbed({ videoUrl }) {
   return (
-    <div className="w-full aspect-video overflow-hidden rounded-2xl mt-8 mb-8">
-      <iframe 
-        className="w-full h-full"
-        src="https://www.youtube.com/embed/HQwLPhE2zys?si=OvjcEQBRYw1jcmvY&amp;controls=1&amp;autoplay=1&amp;start=15" 
-        title="YouTube video player" 
-        frameBorder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerPolicy="strict-origin-when-cross-origin" 
+    <div className="relative pb-[56.25%] h-0 overflow-hidden max-w-full mb-8">
+      <iframe
+        className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+        width="853"
+        height="480"
+        src={videoUrl}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-      ></iframe>
+        title="Embedded youtube"
+      />
     </div>
-  )
+  );
 }

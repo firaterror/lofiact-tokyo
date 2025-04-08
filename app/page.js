@@ -10,9 +10,11 @@ import { useState } from "react";
 
 export default function Home() {
   const [showOverlay, setShowOverlay] = useState(true);
+  const [videoUrl, setVideoUrl] = useState("");
 
   const handleInteraction = () => {
     setShowOverlay(false);
+    setVideoUrl("https://www.youtube.com/embed/HQwLPhE2zys?si=OvjcEQBRYw1jcmvY&controls=1&autoplay=1&start=15");
   };
 
   return (
@@ -36,7 +38,7 @@ export default function Home() {
         </p>
         <AirlineTracker />
         <FlightRadarMap />
-        <YoutubeEmbed />
+        <YoutubeEmbed videoUrl={videoUrl} />
         <LiveATC/>
         <hr className="border-0 mb-8 mt-8 border-t-2 border-t-[#ddd] border-solid"/>
         <p className="!text-sm !text-[#666]">Made by <Link className="text-[#004499] underline cursor-pointer hover:text-[#0066cc] font-medium" href="https://firat.run">firat</Link> in 2025</p> 
