@@ -14,7 +14,7 @@ export default function Home() {
 
   const handleInteraction = () => {
     setShowOverlay(false);
-    setVideoUrl("https://www.youtube.com/embed/HQwLPhE2zys?si=OvjcEQBRYw1jcmvY&controls=1&autoplay=1&start=15");
+    setVideoUrl("https://www.youtube.com/watch?v=PLLRRXURicM&list=RDPLLRRXURicM&controls=1&autoplay=1&start=15");
   };
 
   return (
