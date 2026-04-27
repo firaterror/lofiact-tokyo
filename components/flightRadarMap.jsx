@@ -9,7 +9,7 @@ export default function FlightRadarMap() {
         <iframe 
           title="FlightRadar24" 
           className="absolute top-0 left-0 w-full h-full"
-          src="https://www.flightradar24.com/simple?lat=35.54&lon=139.78&z=13" 
+          src="https://www.flightradar24.com/simple_index.php?lat=35.54&lon=139.78&z=13"
           frameBorder="0" 
           allowFullScreen=""
         ></iframe>
